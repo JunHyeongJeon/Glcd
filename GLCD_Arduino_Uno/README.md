@@ -7,21 +7,16 @@
 #define glcdData6Pin        6
 #define glcdData7Pin        7
 
-/* Arduino pins used for Commands
- * default assignment uses the first five analog pins
-  */
 
-  #define glcdCSEL1        14
-  #define glcdCSEL2        15
+#define glcdCSEL1        14
+#define glcdCSEL2        15
 
-  #if NBR_CHIP_SELECT_PINS > 2
-  #define glcdCSEL3         3   // third chip select if needed
-  #endif
+#if NBR_CHIP_SELECT_PINS > 2
+#define glcdCSEL3         3   // third chip select if needed
 
-  #if NBR_CHIP_SELECT_PINS > 3
-  #define glcdCSEL4         2   // fourth chip select if needed
-  #endif
+#if NBR_CHIP_SELECT_PINS > 3
+#define glcdCSEL4         2   // fourth chip select if needed
 
-  #define glcdRW           16
-  #define glcdDI           17
-  #define glcdEN           18
+#define glcdRW           16
+#define glcdDI           17
+#define glcdEN           18

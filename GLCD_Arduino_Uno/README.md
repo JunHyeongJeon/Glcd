@@ -3,7 +3,7 @@ Arduino Uno GLCD example Source Code
 PIN SYMBOL FUNCTION OF KS0108
 
 "`
-1 Vss Power Supply(GND) \n
+1 Vss Power Supply(GND) '\n'
 2 Vdd Power Supply(+5V) 
 3 Vo Contrast Adjust 
 4 D/I Data(H)/Instruction(L) Code input 

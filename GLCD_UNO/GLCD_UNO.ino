@@ -18,14 +18,14 @@ unsigned int loops = 0;
 unsigned int iter = 0;
 
 void setup(){
-  GLCD.Init(NON_INVERTED);   // initialise the library, non inverted writes pixels onto a clear screen
+//  GLCD.Init(NON_INVERTED);   // initialise the library, non inverted writes pixels onto a clear screen
   GLCD.ClearScreen();  
   GLCD.DrawBitmap(ArduinoIcon, 32,0, BLACK); //draw the bitmap at the given x,y position
   GLCD.SelectFont(System5x7); // switch to fixed width system font 
-  countdown(5); 
-  GLCD.ClearScreen();
-  introScreen();              // show some intro stuff 
-  GLCD.ClearScreen();
+  //countdown(5); 
+  //GLCD.ClearScreen();
+  //introScreen();              // show some intro stuff 
+  //GLCD.ClearScreen();
 }
 
 void introScreen(){
@@ -71,23 +71,23 @@ void countdown(int count){
 }
 
 void  loop(){   // run over and over again
-  iter = 0;
-  startMillis = millis();
-  while( millis() - startMillis < 1000){ // loop for one second
-    GLCD.DrawRect(0, 0, 64, 61, BLACK); // rectangle in left side of screen
-    GLCD.DrawRoundRect(68, 0, 58, 61, 5, BLACK);  // rounded rectangle around text area   
-    for(int i=0; i < 62; i += 4)
-      GLCD.DrawLine(1,1,63,i, BLACK);  // draw lines from upper left down right side of rectangle  
-    GLCD.DrawCircle(32,31,30,BLACK);   // draw circle centered in the left side of screen  
-    GLCD.FillRect(92,40,16,16, WHITE); // clear previous spinner position  
-    drawSpinner(loops++,100,48);       // draw new spinner position
-    //GLCD.FillRect(24,txtLINE3,14,14, WHITE);  // clear text area that will be drawn below 
-    GLCD.CursorTo(5,5);               // locate curser for printing text
-    GLCD.PrintNumber(++iter);         // print current iteration at the current cursor position 
-  } 
-  // display number of iterations in one second
-  GLCD.ClearScreen();               // clear the screen  
-  GLCD.CursorTo(14,2);              // positon cursor  
-  GLCD.Puts("FPS= ");               // print a text string
-  GLCD.PrintNumber(iter);           // print a number 
+//  iter = 0;
+//  startMillis = millis();
+//  while( millis() - startMillis < 1000){ // loop for one second
+//    GLCD.DrawRect(0, 0, 64, 61, BLACK); // rectangle in left side of screen
+//    GLCD.DrawRoundRect(68, 0, 58, 61, 5, BLACK);  // rounded rectangle around text area   
+//    for(int i=0; i < 62; i += 4)
+//      GLCD.DrawLine(1,1,63,i, BLACK);  // draw lines from upper left down right side of rectangle  
+//    GLCD.DrawCircle(32,31,30,BLACK);   // draw circle centered in the left side of screen  
+//    GLCD.FillRect(92,40,16,16, WHITE); // clear previous spinner position  
+//    drawSpinner(loops++,100,48);       // draw new spinner position
+//    //GLCD.FillRect(24,txtLINE3,14,14, WHITE);  // clear text area that will be drawn below 
+//    GLCD.CursorTo(5,5);               // locate curser for printing text
+//    GLCD.PrintNumber(++iter);         // print current iteration at the current cursor position 
+//  } 
+//  // display number of iterations in one second
+//  GLCD.ClearScreen();               // clear the screen  
+//  GLCD.CursorTo(14,2);              // positon cursor  
+//  GLCD.Puts("FPS= ");               // print a text string
+//  GLCD.PrintNumber(iter);           // print a number 
 }

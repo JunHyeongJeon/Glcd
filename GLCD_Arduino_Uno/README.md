@@ -2,7 +2,7 @@ Arduino Uno GLCD example Source Code
 
 PIN SYMBOL FUNCTION OF KS0108
 
-"'
+"`
 1 Vss Power Supply(GND) 
 2 Vdd Power Supply(+5V) 
 3 Vo Contrast Adjust 
@@ -16,7 +16,7 @@ PIN SYMBOL FUNCTION OF KS0108
 18 Vee Negative Voltage output(-10V) 
 19 LED+ Power Supply for LED B/L(+) 
 20 LED- Power Supply for LED B/L(-)
-"'
+"`
 UNI PIN SETTING
 
 See it ks0108_Arduino.h

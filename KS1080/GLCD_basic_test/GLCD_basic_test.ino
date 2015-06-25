@@ -1,7 +1,5 @@
 #include "ks0108.h"
 
-#include <inttypes.h>
-#include <avr/pgmspace.h>
 
 #ifndef SYSTEM5x7_H
 #define SYSTEM5x7_H

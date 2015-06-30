@@ -22,72 +22,76 @@ const static unsigned char __attribute__ ((progmem)) logo16_glcd_bmp[]={
 
 // The setup() method runs once, when the sketch starts
 void setup()   {                
-  Serial.begin(9600);
+//  Serial.begin(9600);
 
-  Serial.print(freeRam());
+//  Serial.print(freeRam());
   
   // turn on backlight
-  pinMode(BACKLIGHT_LED, OUTPUT);
-  digitalWrite(BACKLIGHT_LED, HIGH);
+//  pinMode(BACKLIGHT_LED, OUTPUT);
+//  digitalWrite(BACKLIGHT_LED, HIGH);
 
   // initialize and set the contrast to 0x18
   glcd.begin(0x18);
 
   glcd.display(); // show splashscreen
-  delay(2000);
-  glcd.clear();
+//  delay(2000);
+//  glcd.clear();
+////
+////  // draw a single pixel
+//  glcd.setpixel(10, 10, BLACK);
+//  glcd.display();        // show the changes to the buffer
+//  delay(2000);
+//  glcd.clear();
+////
+////  // draw many lines
+//  testdrawline();
+//  glcd.display();       // show the lines
 
-  // draw a single pixel
-  glcd.setpixel(10, 10, BLACK);
-  glcd.display();        // show the changes to the buffer
-  delay(2000);
-  glcd.clear();
 
-  // draw many lines
-  testdrawline();
-  glcd.display();       // show the lines
-  delay(2000);
-  glcd.clear();
-
-  // draw rectangles
-  testdrawrect();
-  glcd.display();
-  delay(2000);
-  glcd.clear();
-
-  // draw multiple rectangles
-  testfillrect();
-  glcd.display();
-  delay(2000);
-  glcd.clear();
-
-  // draw mulitple circles
-  testdrawcircle();
-  glcd.display();
-  delay(2000);
-  glcd.clear();
-
-  // draw a black circle, 10 pixel radius, at location (32,32)
-  glcd.fillcircle(32, 32, 10, BLACK);
-  glcd.display();
-  delay(2000);
-  glcd.clear();
-
-  // draw the first ~120 characters in the font
-  testdrawchar();
-  glcd.display();
-  delay(2000);
-  glcd.clear();
-
-  // draw a string at location (0,0)
-  glcd.drawstring(0, 0, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation");
-  glcd.display();
-  delay(2000);
-  glcd.clear();
-
-  // draw a bitmap icon and 'animate' movement
-  testdrawbitmap(logo16_glcd_bmp, LOGO16_GLCD_HEIGHT, LOGO16_GLCD_WIDTH);
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw rectangles
+//  testdrawrect();
+//  glcd.display();
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw multiple rectangles
+//  testfillrect();
+//  glcd.display();
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw mulitple circles
+//  testdrawcircle();
+//  glcd.display();
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw a black circle, 10 pixel radius, at location (32,32)
+//  glcd.fillcircle(32, 32, 10, BLACK);
+//  glcd.display();
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw the first ~120 characters in the font
+//  testdrawchar();
+//  glcd.display();
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw a string at location (0,0)
+//  glcd.drawstring(0, 0, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation");
+//  glcd.display();
+//  delay(2000);
+//  glcd.clear();
+//
+//  // draw a bitmap icon and 'animate' movement
+//  testdrawbitmap(logo16_glcd_bmp, LOGO16_GLCD_HEIGHT, LOGO16_GLCD_WIDTH);
 }
+
+
 
 
 void loop()                     

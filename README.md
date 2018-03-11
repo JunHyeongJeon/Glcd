@@ -1,5 +1,5 @@
 # Glcd
-GLCD Open project
+GLCD project
 --- 
 1. KS1080
 2. ST7565
